@@ -28,7 +28,6 @@ import (
 	"istio.io/istio/pilot/pkg/networking/core/v1alpha3/envoyfilter"
 	"istio.io/istio/pilot/pkg/networking/util"
 	"istio.io/istio/pkg/proto"
-	"istio.io/pkg/log"
 )
 
 var (

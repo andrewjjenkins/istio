@@ -28,7 +28,6 @@ import (
 	"github.com/hashicorp/go-multierror"
 
 	networking "istio.io/api/networking/v1alpha3"
-	"istio.io/pkg/log"
 
 	"istio.io/istio/pilot/pkg/features"
 	"istio.io/istio/pilot/pkg/model"
@@ -143,10 +142,10 @@ func (configgen *ConfigGeneratorImpl) buildGatewayListeners(
 		pluginParams := &plugin.InputParams{
 			ListenerProtocol:           listenerProtocol,
 			DeprecatedListenerCategory: networking.EnvoyFilter_DeprecatedListenerMatch_GATEWAY,
-			Env:                        env,
-			Node:                       node,
-			Push:                       push,
-			ServiceInstance:            si,
+			Env:             env,
+			Node:            node,
+			Push:            push,
+			ServiceInstance: si,
 			Port: &model.Port{
 				Name:     servers[0].Port.Name,
 				Port:     int(portNumber),
