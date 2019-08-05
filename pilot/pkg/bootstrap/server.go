@@ -132,6 +132,8 @@ func init() {
 	// This should only be set before any RPCs are sent or received by this program.
 	grpc.EnableTracing = true
 
+	fmt.Printf("Hello from Andrew's pilot ver 2\n")
+
 	// Export pilot version as metric for fleet analytics.
 	pilotVersion := prom.NewGaugeVec(prom.GaugeOpts{
 		Name: "pilot_info",
